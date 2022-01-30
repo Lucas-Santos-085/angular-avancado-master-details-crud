@@ -62,7 +62,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   private buildCategoryForm() {
     this.categoryForm = this.formBuilder.group({
       id: [null],
-      name: [null, [Validators.required, Validators.minLength]],
+      name: [null, [Validators.required, Validators.minLength(2)]],
       description: [null],
     });
   }
