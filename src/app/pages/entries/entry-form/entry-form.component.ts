@@ -19,6 +19,14 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
   submittingForm: boolean = false;
   entry: Entry = new Entry();
 
+  imaskConfig = {
+    mask: Number, //só entram números
+    scale: 2,
+    thousandsSeparator: "",
+    padFractionalZeros: true, //adicionar zero em decimais (10,2 = 10,20)
+    radix: ",", //separador de decimais
+  };
+
   constructor(
     private entryService: EntryService,
     private route: ActivatedRoute,
