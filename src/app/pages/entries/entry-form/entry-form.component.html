@@ -102,20 +102,23 @@
       </div>
 
       <!-- date -->
-      <div class="form-group col-md-3">
+      <div class="form-group col-md-2">
         <label for="date">Data</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">R$</div>
-          </div>
-          <input
-            [imask]="imaskConfig"
-            type="text"
-            class="form-control text-right"
-            id="date"
-            formControlName="date"
-          />
-        </div>
+        <!-- <p-calendar
+          id="date"
+          formControlName="date"
+          inputStyleClass="form-control"
+          dataType="string"
+          dateFormat="dd/mm/yy"
+          [locale]="pt-BR"
+          [showButtonBar]="true"
+          > </p-calendar> -->
+        <input
+          type="date"
+          id="date"
+          formControlName="date"
+          class="form-control"
+        />
 
         <div
           class="text-danger"
